@@ -1,0 +1,536 @@
+2020-07-29 07:45:53.571776 (MainThread): Running with dbt=0.17.1
+2020-07-29 07:45:53.771992 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.rpc.server.RPCServerTask'>, debug=False, exclude=None, host='0.0.0.0', log_cache_events=False, log_format='default', models=None, partial_parse=True, port=8580, profile='user', profiles_dir='/usr/src/develop/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='rpc', write_json=True)
+2020-07-29 07:45:53.796212 (MainThread): Tracking: tracking
+2020-07-29 07:45:53.796505 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd0b68c3710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd0b68c3588>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd0b605bdd8>]}
+2020-07-29 07:45:53.796919 (MainThread): Serving RPC server at 0.0.0.0:8580, pid=13
+2020-07-29 07:45:53.797500 (MainThread): Supported methods: ['cli_args', 'compile', 'compile_sql', 'deps', 'docs.generate', 'gc', 'get-manifest', 'kill', 'poll', 'ps', 'run', 'run-operation', 'run_sql', 'seed', 'snapshot', 'snapshot-freshness', 'status', 'test']
+2020-07-29 07:45:53.797902 (MainThread): Send requests to http://localhost:8580/jsonrpc
+2020-07-29 07:45:53.801262 (Thread-1): Parsing macros/core.sql
+2020-07-29 07:45:53.805976 (Thread-1): Parsing macros/materializations/helpers.sql
+2020-07-29 07:45:53.813991 (Thread-1): Parsing macros/materializations/common/merge.sql
+2020-07-29 07:45:53.828450 (Thread-1): Parsing macros/materializations/table/table.sql
+2020-07-29 07:45:53.836065 (Thread-1): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-07-29 07:45:53.842456 (Thread-1): Parsing macros/materializations/view/view.sql
+2020-07-29 07:45:53.848922 (Thread-1): Parsing macros/materializations/snapshot/snapshot.sql
+2020-07-29 07:45:53.884453 (Thread-1): Parsing macros/materializations/snapshot/strategies.sql
+2020-07-29 07:45:53.901709 (Thread-1): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-07-29 07:45:53.903590 (Thread-1): Parsing macros/materializations/seed/seed.sql
+2020-07-29 07:45:53.934134 (Thread-1): Parsing macros/materializations/incremental/incremental.sql
+2020-07-29 07:45:53.945223 (Thread-1): Parsing macros/materializations/incremental/helpers.sql
+2020-07-29 07:45:53.947334 (Thread-1): Parsing macros/etc/query.sql
+2020-07-29 07:45:53.948473 (Thread-1): Parsing macros/etc/get_custom_schema.sql
+2020-07-29 07:45:53.951033 (Thread-1): Parsing macros/etc/get_custom_alias.sql
+2020-07-29 07:45:53.952072 (Thread-1): Parsing macros/etc/datetime.sql
+2020-07-29 07:45:53.961187 (Thread-1): Parsing macros/etc/get_custom_database.sql
+2020-07-29 07:45:53.962928 (Thread-1): Parsing macros/etc/is_incremental.sql
+2020-07-29 07:45:53.964656 (Thread-1): Parsing macros/adapters/common.sql
+2020-07-29 07:45:54.016339 (Thread-1): Parsing macros/schema_tests/relationships.sql
+2020-07-29 07:45:54.018485 (Thread-1): Parsing macros/schema_tests/unique.sql
+2020-07-29 07:45:54.020339 (Thread-1): Parsing macros/schema_tests/accepted_values.sql
+2020-07-29 07:45:54.023387 (Thread-1): Parsing macros/schema_tests/not_null.sql
+2020-07-29 07:45:54.024667 (Thread-1): Parsing macros/adapters.sql
+2020-07-29 07:45:54.049555 (Thread-1): Parsing macros/catalog.sql
+2020-07-29 07:45:54.053021 (Thread-1): Parsing macros/materializations/incremental.sql
+2020-07-29 07:45:54.068479 (Thread-1): Parsing macros/materializations/merge.sql
+2020-07-29 07:45:54.071695 (Thread-1): Parsing macros/materializations/table.sql
+2020-07-29 07:45:54.077031 (Thread-1): Parsing macros/materializations/view.sql
+2020-07-29 07:45:54.101587 (Thread-1): * Deprecation Warning: dbt v0.17.0 introduces a new config format for the
+dbt_project.yml file. Support for the existing version 1 format will be removed
+in a future release of dbt. The following packages are currently configured with
+config version 1:
+ - crypto_package
+
+For upgrading instructions, consult the documentation:
+  https://docs.getdbt.com/docs/guides/migration-guide/upgrading-to-0-17-0
+2020-07-29 07:45:54.224802 (Thread-2): handling status request
+2020-07-29 07:45:54.225359 (Thread-2): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'ce206202-2d74-4bc2-b2a4-63a8b109782e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd0b5f79630>]}
+2020-07-29 07:45:54.227196 (Thread-2): sending response (<Response 183 bytes [200 OK]>) to 10.0.25.171
+2020-07-29 07:45:54.240835 (Thread-1): Acquiring new snowflake connection "model.crypto_package.analytics_view".
+2020-07-29 07:45:54.240941 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:45:54.276240 (Thread-1): Acquiring new snowflake connection "model.crypto_package.average_acctbal_by_nation".
+2020-07-29 07:45:54.276357 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:45:54.287306 (Thread-1): Acquiring new snowflake connection "model.crypto_package.supplier_parts_aggregates".
+2020-07-29 07:45:54.287413 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:45:54.299363 (Thread-1): Acquiring new snowflake connection "model.crypto_package.customer_nation_region_aggregates".
+2020-07-29 07:45:54.299501 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:45:54.312812 (Thread-1): Acquiring new snowflake connection "model.crypto_package.average_supply_cost_and_available_quantity_per_part".
+2020-07-29 07:45:54.312911 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:45:54.323575 (Thread-1): Acquiring new snowflake connection "model.crypto_package.supplier_parts".
+2020-07-29 07:45:54.323695 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:45:54.333193 (Thread-1): Acquiring new snowflake connection "model.crypto_package.customer_nation_region".
+2020-07-29 07:45:54.333290 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:45:54.343284 (Thread-1): Acquiring new snowflake connection "model.crypto_package.average_account_balance_by_part_and_supplier".
+2020-07-29 07:45:54.343384 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:45:54.364447 (Thread-1): Acquiring new snowflake connection "test.crypto_package.assert_averages_are_unique".
+2020-07-29 07:45:54.364566 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:45:55.772909 (Thread-3): handling status request
+2020-07-29 07:45:55.773418 (Thread-3): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'ce206202-2d74-4bc2-b2a4-63a8b109782e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd0b5513668>]}
+2020-07-29 07:45:55.778851 (Thread-3): sending response (<Response 14399 bytes [200 OK]>) to 10.0.13.21
+2020-07-29 07:46:15.693777 (MainThread): Running with dbt=0.17.1
+2020-07-29 07:46:15.872422 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.rpc.server.RPCServerTask'>, debug=False, exclude=None, host='0.0.0.0', log_cache_events=False, log_format='default', models=None, partial_parse=True, port=8580, profile='user', profiles_dir='/usr/src/develop/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='rpc', write_json=True)
+2020-07-29 07:46:15.884522 (MainThread): Tracking: tracking
+2020-07-29 07:46:15.885321 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5313387550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5312b17b70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5312b17a58>]}
+2020-07-29 07:46:15.893721 (MainThread): Serving RPC server at 0.0.0.0:8580, pid=14
+2020-07-29 07:46:15.894291 (MainThread): Supported methods: ['cli_args', 'compile', 'compile_sql', 'deps', 'docs.generate', 'gc', 'get-manifest', 'kill', 'poll', 'ps', 'run', 'run-operation', 'run_sql', 'seed', 'snapshot', 'snapshot-freshness', 'status', 'test']
+2020-07-29 07:46:15.894617 (MainThread): Send requests to http://localhost:8580/jsonrpc
+2020-07-29 07:46:15.896822 (Thread-1): Parsing macros/core.sql
+2020-07-29 07:46:15.901526 (Thread-1): Parsing macros/materializations/helpers.sql
+2020-07-29 07:46:15.909488 (Thread-1): Parsing macros/materializations/common/merge.sql
+2020-07-29 07:46:15.923831 (Thread-1): Parsing macros/materializations/table/table.sql
+2020-07-29 07:46:15.930619 (Thread-1): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-07-29 07:46:15.935604 (Thread-1): Parsing macros/materializations/view/view.sql
+2020-07-29 07:46:15.941984 (Thread-1): Parsing macros/materializations/snapshot/snapshot.sql
+2020-07-29 07:46:15.971071 (Thread-1): Parsing macros/materializations/snapshot/strategies.sql
+2020-07-29 07:46:15.987944 (Thread-1): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-07-29 07:46:15.989791 (Thread-1): Parsing macros/materializations/seed/seed.sql
+2020-07-29 07:46:16.010913 (Thread-1): Parsing macros/materializations/incremental/incremental.sql
+2020-07-29 07:46:16.017285 (Thread-1): Parsing macros/materializations/incremental/helpers.sql
+2020-07-29 07:46:16.019225 (Thread-1): Parsing macros/etc/query.sql
+2020-07-29 07:46:16.020346 (Thread-1): Parsing macros/etc/get_custom_schema.sql
+2020-07-29 07:46:16.022479 (Thread-1): Parsing macros/etc/get_custom_alias.sql
+2020-07-29 07:46:16.023557 (Thread-1): Parsing macros/etc/datetime.sql
+2020-07-29 07:46:16.032614 (Thread-1): Parsing macros/etc/get_custom_database.sql
+2020-07-29 07:46:16.034320 (Thread-1): Parsing macros/etc/is_incremental.sql
+2020-07-29 07:46:16.036051 (Thread-1): Parsing macros/adapters/common.sql
+2020-07-29 07:46:16.086420 (Thread-1): Parsing macros/schema_tests/relationships.sql
+2020-07-29 07:46:16.087649 (Thread-1): Parsing macros/schema_tests/unique.sql
+2020-07-29 07:46:16.088802 (Thread-1): Parsing macros/schema_tests/accepted_values.sql
+2020-07-29 07:46:16.090886 (Thread-1): Parsing macros/schema_tests/not_null.sql
+2020-07-29 07:46:16.092186 (Thread-1): Parsing macros/adapters.sql
+2020-07-29 07:46:16.114789 (Thread-1): Parsing macros/catalog.sql
+2020-07-29 07:46:16.116733 (Thread-1): Parsing macros/materializations/incremental.sql
+2020-07-29 07:46:16.125741 (Thread-1): Parsing macros/materializations/merge.sql
+2020-07-29 07:46:16.127799 (Thread-1): Parsing macros/materializations/table.sql
+2020-07-29 07:46:16.131450 (Thread-1): Parsing macros/materializations/view.sql
+2020-07-29 07:46:16.153867 (Thread-1): * Deprecation Warning: dbt v0.17.0 introduces a new config format for the
+dbt_project.yml file. Support for the existing version 1 format will be removed
+in a future release of dbt. The following packages are currently configured with
+config version 1:
+ - crypto_package
+
+For upgrading instructions, consult the documentation:
+  https://docs.getdbt.com/docs/guides/migration-guide/upgrading-to-0-17-0
+2020-07-29 07:46:16.286791 (Thread-1): Acquiring new snowflake connection "model.crypto_package.analytics_view".
+2020-07-29 07:46:16.286954 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:46:16.316451 (Thread-1): Acquiring new snowflake connection "model.crypto_package.average_acctbal_by_nation".
+2020-07-29 07:46:16.316560 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:46:16.327704 (Thread-1): Acquiring new snowflake connection "model.crypto_package.supplier_parts_aggregates".
+2020-07-29 07:46:16.327832 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:46:16.341875 (Thread-1): Acquiring new snowflake connection "model.crypto_package.customer_nation_region_aggregates".
+2020-07-29 07:46:16.341971 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:46:16.356787 (Thread-1): Acquiring new snowflake connection "model.crypto_package.average_supply_cost_and_available_quantity_per_part".
+2020-07-29 07:46:16.356885 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:46:16.368433 (Thread-1): Acquiring new snowflake connection "model.crypto_package.supplier_parts".
+2020-07-29 07:46:16.368530 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:46:16.378201 (Thread-1): Acquiring new snowflake connection "model.crypto_package.customer_nation_region".
+2020-07-29 07:46:16.378298 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:46:16.387902 (Thread-1): Acquiring new snowflake connection "model.crypto_package.average_account_balance_by_part_and_supplier".
+2020-07-29 07:46:16.387998 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:46:16.407318 (Thread-1): Acquiring new snowflake connection "test.crypto_package.assert_averages_are_unique".
+2020-07-29 07:46:16.407416 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:46:18.726951 (Thread-2): handling status request
+2020-07-29 07:46:18.727715 (Thread-2): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'ef667b42-0e5f-4098-bf95-cfd19288f3fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f53129e1e80>]}
+2020-07-29 07:46:18.737765 (Thread-2): sending response (<Response 14399 bytes [200 OK]>) to 10.0.28.48
+2020-07-29 07:46:21.599659 (Thread-3): handling status request
+2020-07-29 07:46:21.600283 (Thread-3): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'ef667b42-0e5f-4098-bf95-cfd19288f3fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5312ade278>]}
+2020-07-29 07:46:21.606221 (Thread-3): sending response (<Response 14399 bytes [200 OK]>) to 10.0.25.171
+2020-07-29 07:48:58.387897 (Thread-4): handling status request
+2020-07-29 07:48:58.390417 (Thread-4): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'ef667b42-0e5f-4098-bf95-cfd19288f3fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f53129b96d8>]}
+2020-07-29 07:48:58.396909 (Thread-4): sending response (<Response 14399 bytes [200 OK]>) to 10.0.28.95
+2020-07-29 07:48:58.847217 (Thread-5): handling compile_sql request
+2020-07-29 07:48:58.847720 (Thread-5): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'ef667b42-0e5f-4098-bf95-cfd19288f3fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f531298f0b8>]}
+2020-07-29 07:48:58.848278 (Thread-5): sending response (<Response 903 bytes [200 OK]>) to 10.0.34.138
+2020-07-29 07:49:02.836732 (Thread-6): handling status request
+2020-07-29 07:49:02.837216 (Thread-6): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'ef667b42-0e5f-4098-bf95-cfd19288f3fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f531298f5f8>]}
+2020-07-29 07:49:02.842496 (Thread-6): sending response (<Response 14399 bytes [200 OK]>) to 10.0.36.52
+2020-07-29 07:49:03.270970 (Thread-7): handling run_sql request
+2020-07-29 07:49:03.271514 (Thread-7): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'ef667b42-0e5f-4098-bf95-cfd19288f3fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f531298f908>]}
+2020-07-29 07:49:03.272098 (Thread-7): sending response (<Response 903 bytes [200 OK]>) to 10.0.36.52
+2020-07-29 07:49:21.367426 (Thread-8): handling status request
+2020-07-29 07:49:21.369394 (Thread-8): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'ef667b42-0e5f-4098-bf95-cfd19288f3fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f531298f358>]}
+2020-07-29 07:49:21.374711 (Thread-8): sending response (<Response 14399 bytes [200 OK]>) to 10.0.4.29
+2020-07-29 07:49:21.385368 (Thread-9): handling status request
+2020-07-29 07:49:21.385715 (Thread-9): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'ef667b42-0e5f-4098-bf95-cfd19288f3fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f531270b898>]}
+2020-07-29 07:49:21.390842 (Thread-9): sending response (<Response 14399 bytes [200 OK]>) to 10.0.35.122
+2020-07-29 07:49:21.862522 (Thread-10): handling cli_args request
+2020-07-29 07:49:21.863116 (Thread-10): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'ef667b42-0e5f-4098-bf95-cfd19288f3fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f53127159e8>]}
+2020-07-29 07:49:21.863588 (Thread-10): sending response (<Response 903 bytes [200 OK]>) to 10.0.7.205
+2020-07-29 07:50:07.346497 (Thread-11): handling status request
+2020-07-29 07:50:07.348416 (Thread-11): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'ef667b42-0e5f-4098-bf95-cfd19288f3fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5312715eb8>]}
+2020-07-29 07:50:07.354487 (Thread-11): sending response (<Response 14399 bytes [200 OK]>) to 10.0.28.48
+2020-07-29 07:50:07.766012 (Thread-12): handling compile_sql request
+2020-07-29 07:50:07.766527 (Thread-12): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'ef667b42-0e5f-4098-bf95-cfd19288f3fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5312715e10>]}
+2020-07-29 07:50:07.766942 (Thread-12): sending response (<Response 903 bytes [200 OK]>) to 10.0.47.91
+2020-07-29 07:50:15.600021 (Thread-13): handling status request
+2020-07-29 07:50:15.602582 (Thread-13): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'ef667b42-0e5f-4098-bf95-cfd19288f3fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5312719358>]}
+2020-07-29 07:50:15.607939 (Thread-13): sending response (<Response 14399 bytes [200 OK]>) to 10.0.28.48
+2020-07-29 07:50:15.991273 (Thread-14): handling run_sql request
+2020-07-29 07:50:15.991756 (Thread-14): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'ef667b42-0e5f-4098-bf95-cfd19288f3fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f531271f860>]}
+2020-07-29 07:50:15.992129 (Thread-14): sending response (<Response 903 bytes [200 OK]>) to 10.0.25.171
+2020-07-29 07:50:45.497459 (Thread-15): Acquiring new snowflake connection "model.crypto_package.analytics_view".
+2020-07-29 07:50:45.499381 (Thread-15): Opening a new connection, currently in state init
+2020-07-29 07:50:45.513275 (Thread-15): Acquiring new snowflake connection "model.crypto_package.average_acctbal_by_nation".
+2020-07-29 07:50:45.513446 (Thread-15): Opening a new connection, currently in state init
+2020-07-29 07:50:45.529402 (Thread-15): Acquiring new snowflake connection "model.crypto_package.supplier_parts_aggregates".
+2020-07-29 07:50:45.529601 (Thread-15): Opening a new connection, currently in state init
+2020-07-29 07:50:45.546814 (Thread-15): Acquiring new snowflake connection "model.crypto_package.customer_nation_region_aggregates".
+2020-07-29 07:50:45.547031 (Thread-15): Opening a new connection, currently in state init
+2020-07-29 07:50:45.562902 (Thread-15): Acquiring new snowflake connection "model.crypto_package.average_supply_cost_and_available_quantity_per_part".
+2020-07-29 07:50:45.563024 (Thread-15): Opening a new connection, currently in state init
+2020-07-29 07:50:45.574165 (Thread-15): Acquiring new snowflake connection "model.crypto_package.supplier_parts".
+2020-07-29 07:50:45.574287 (Thread-15): Opening a new connection, currently in state init
+2020-07-29 07:50:45.585185 (Thread-15): Acquiring new snowflake connection "model.crypto_package.customer_nation_region".
+2020-07-29 07:50:45.585309 (Thread-15): Opening a new connection, currently in state init
+2020-07-29 07:50:45.595365 (Thread-15): Acquiring new snowflake connection "model.crypto_package.average_account_balance_by_part_and_supplier".
+2020-07-29 07:50:45.595484 (Thread-15): Opening a new connection, currently in state init
+2020-07-29 07:50:45.609122 (Thread-15): Acquiring new snowflake connection "test.crypto_package.assert_averages_are_unique".
+2020-07-29 07:50:45.609256 (Thread-15): Opening a new connection, currently in state init
+2020-07-29 07:50:46.403617 (Thread-16): handling status request
+2020-07-29 07:50:46.404229 (Thread-16): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'ef667b42-0e5f-4098-bf95-cfd19288f3fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5312692fd0>]}
+2020-07-29 07:50:46.407320 (Thread-16): sending response (<Response 5870 bytes [200 OK]>) to 10.0.21.141
+2020-07-29 07:50:57.688511 (MainThread): Running with dbt=0.17.1
+2020-07-29 07:50:57.869367 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.rpc.server.RPCServerTask'>, debug=False, exclude=None, host='0.0.0.0', log_cache_events=False, log_format='default', models=None, partial_parse=True, port=8580, profile='user', profiles_dir='/usr/src/develop/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='rpc', write_json=True)
+2020-07-29 07:50:57.881796 (MainThread): Tracking: tracking
+2020-07-29 07:50:57.882614 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4237791cc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f424a9526a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4236f2dcf8>]}
+2020-07-29 07:50:57.882936 (MainThread): Serving RPC server at 0.0.0.0:8580, pid=14
+2020-07-29 07:50:57.891749 (MainThread): Supported methods: ['cli_args', 'compile', 'compile_sql', 'deps', 'docs.generate', 'gc', 'get-manifest', 'kill', 'poll', 'ps', 'run', 'run-operation', 'run_sql', 'seed', 'snapshot', 'snapshot-freshness', 'status', 'test']
+2020-07-29 07:50:57.892163 (MainThread): Send requests to http://localhost:8580/jsonrpc
+2020-07-29 07:50:57.895833 (Thread-1): Parsing macros/core.sql
+2020-07-29 07:50:57.900560 (Thread-1): Parsing macros/materializations/helpers.sql
+2020-07-29 07:50:57.908628 (Thread-1): Parsing macros/materializations/common/merge.sql
+2020-07-29 07:50:57.923852 (Thread-2): handling status request
+2020-07-29 07:50:57.924319 (Thread-1): Parsing macros/materializations/table/table.sql
+2020-07-29 07:50:57.924476 (Thread-2): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '640ddc85-6fff-4c9b-80ec-bfdd91df96a3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4236f334a8>]}
+2020-07-29 07:50:57.933417 (Thread-2): sending response (<Response 183 bytes [200 OK]>) to 10.0.34.138
+2020-07-29 07:50:57.934265 (Thread-1): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-07-29 07:50:57.939659 (Thread-1): Parsing macros/materializations/view/view.sql
+2020-07-29 07:50:57.946137 (Thread-1): Parsing macros/materializations/snapshot/snapshot.sql
+2020-07-29 07:50:57.975102 (Thread-1): Parsing macros/materializations/snapshot/strategies.sql
+2020-07-29 07:50:57.992025 (Thread-1): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-07-29 07:50:57.993857 (Thread-1): Parsing macros/materializations/seed/seed.sql
+2020-07-29 07:50:58.015179 (Thread-1): Parsing macros/materializations/incremental/incremental.sql
+2020-07-29 07:50:58.021538 (Thread-1): Parsing macros/materializations/incremental/helpers.sql
+2020-07-29 07:50:58.023493 (Thread-1): Parsing macros/etc/query.sql
+2020-07-29 07:50:58.024633 (Thread-1): Parsing macros/etc/get_custom_schema.sql
+2020-07-29 07:50:58.026815 (Thread-1): Parsing macros/etc/get_custom_alias.sql
+2020-07-29 07:50:58.027841 (Thread-1): Parsing macros/etc/datetime.sql
+2020-07-29 07:50:58.037178 (Thread-1): Parsing macros/etc/get_custom_database.sql
+2020-07-29 07:50:58.038926 (Thread-1): Parsing macros/etc/is_incremental.sql
+2020-07-29 07:50:58.040659 (Thread-1): Parsing macros/adapters/common.sql
+2020-07-29 07:50:58.091084 (Thread-1): Parsing macros/schema_tests/relationships.sql
+2020-07-29 07:50:58.092294 (Thread-1): Parsing macros/schema_tests/unique.sql
+2020-07-29 07:50:58.093445 (Thread-1): Parsing macros/schema_tests/accepted_values.sql
+2020-07-29 07:50:58.095516 (Thread-1): Parsing macros/schema_tests/not_null.sql
+2020-07-29 07:50:58.096775 (Thread-1): Parsing macros/adapters.sql
+2020-07-29 07:50:58.119278 (Thread-1): Parsing macros/catalog.sql
+2020-07-29 07:50:58.121205 (Thread-1): Parsing macros/materializations/incremental.sql
+2020-07-29 07:50:58.130289 (Thread-1): Parsing macros/materializations/merge.sql
+2020-07-29 07:50:58.132349 (Thread-1): Parsing macros/materializations/table.sql
+2020-07-29 07:50:58.135983 (Thread-1): Parsing macros/materializations/view.sql
+2020-07-29 07:50:58.159984 (Thread-1): * Deprecation Warning: dbt v0.17.0 introduces a new config format for the
+dbt_project.yml file. Support for the existing version 1 format will be removed
+in a future release of dbt. The following packages are currently configured with
+config version 1:
+ - crypto_package
+
+For upgrading instructions, consult the documentation:
+  https://docs.getdbt.com/docs/guides/migration-guide/upgrading-to-0-17-0
+2020-07-29 07:50:58.291668 (Thread-1): Acquiring new snowflake connection "model.crypto_package.analytics_view".
+2020-07-29 07:50:58.291792 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:50:58.322565 (Thread-1): Acquiring new snowflake connection "model.crypto_package.average_acctbal_by_nation".
+2020-07-29 07:50:58.322671 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:50:58.334912 (Thread-1): Acquiring new snowflake connection "model.crypto_package.supplier_parts_aggregates".
+2020-07-29 07:50:58.335012 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:50:58.348532 (Thread-1): Acquiring new snowflake connection "model.crypto_package.customer_nation_region_aggregates".
+2020-07-29 07:50:58.348631 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:50:58.361143 (Thread-1): Acquiring new snowflake connection "model.crypto_package.average_supply_cost_and_available_quantity_per_part".
+2020-07-29 07:50:58.361242 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:50:58.373880 (Thread-1): Acquiring new snowflake connection "model.crypto_package.supplier_parts".
+2020-07-29 07:50:58.373980 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:50:58.385338 (Thread-1): Acquiring new snowflake connection "model.crypto_package.customer_nation_region".
+2020-07-29 07:50:58.385437 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:50:58.396939 (Thread-1): Acquiring new snowflake connection "model.crypto_package.average_account_balance_by_part_and_supplier".
+2020-07-29 07:50:58.397038 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:50:58.421733 (Thread-1): Acquiring new snowflake connection "test.crypto_package.assert_averages_are_unique".
+2020-07-29 07:50:58.421834 (Thread-1): Opening a new connection, currently in state init
+2020-07-29 07:50:59.714865 (Thread-3): handling status request
+2020-07-29 07:50:59.715377 (Thread-3): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '640ddc85-6fff-4c9b-80ec-bfdd91df96a3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f42363f8470>]}
+2020-07-29 07:50:59.720847 (Thread-3): sending response (<Response 14399 bytes [200 OK]>) to 10.0.12.161
+2020-07-29 07:54:59.895485 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4236f338d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f42363e7630>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f42363b4668>]}
+2020-07-29 07:54:59.897326 (MainThread): Flushing usage events
+2020-07-29 07:54:59.985929 (MainThread): Connection 'test.crypto_package.assert_averages_are_unique' was properly closed.
+2020-07-29 07:54:59.986305 (MainThread): Runtime Error
+  Syntax error near line 5
+  ------------------------------
+  2  |   target: dev <- environment to default to
+  3  |   outputs:
+  4  |     dev: <- configuring a specific environment
+  5  |       type: snowflake
+  6  |       account: MUZAFER
+  7  |       user: muzafer
+  8  |       password: Muzafer8008
+  
+  Raw Error:
+  ------------------------------
+  mapping values are not allowed here
+    in "<unicode string>", line 5, column 11:
+            type: snowflake
+                ^
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/dbt/clients/yaml_helper.py", line 62, in load_yaml_text
+    return safe_load(contents)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/clients/yaml_helper.py", line 57, in safe_load
+    return yaml.load(contents, Loader=YamlLoader)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/__init__.py", line 72, in load
+    return loader.get_single_data()
+  File "/usr/local/lib/python3.6/dist-packages/yaml/constructor.py", line 35, in get_single_data
+    node = self.get_single_node()
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+  File "/usr/local/lib/python3.6/dist-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/usr/local/lib/python3.6/dist-packages/yaml/parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+  File "/usr/local/lib/python3.6/dist-packages/yaml/scanner.py", line 116, in check_token
+    self.fetch_more_tokens()
+  File "/usr/local/lib/python3.6/dist-packages/yaml/scanner.py", line 220, in fetch_more_tokens
+    return self.fetch_value()
+  File "/usr/local/lib/python3.6/dist-packages/yaml/scanner.py", line 576, in fetch_value
+    self.get_mark())
+yaml.scanner.ScannerError: mapping values are not allowed here
+  in "<unicode string>", line 5, column 11:
+          type: snowflake
+              ^
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/dbt/main.py", line 169, in track_run
+    yield
+  File "/usr/local/lib/python3.6/dist-packages/dbt/main.py", line 212, in run_from_args
+    results = task.run()
+  File "/usr/local/lib/python3.6/dist-packages/dbt/task/rpc/server.py", line 147, in run
+    self.run_forever()
+  File "/usr/local/lib/python3.6/dist-packages/dbt/task/rpc/server.py", line 142, in run_forever
+    threaded=not self.task_manager.single_threaded(),
+  File "/usr/local/lib/python3.6/dist-packages/werkzeug/serving.py", line 1012, in run_simple
+    inner()
+  File "/usr/local/lib/python3.6/dist-packages/werkzeug/serving.py", line 969, in inner
+    srv.serve_forever()
+  File "/usr/local/lib/python3.6/dist-packages/werkzeug/serving.py", line 737, in serve_forever
+    HTTPServer.serve_forever(self)
+  File "/usr/lib/python3.6/socketserver.py", line 236, in serve_forever
+    ready = selector.select(poll_interval)
+  File "/usr/lib/python3.6/selectors.py", line 376, in select
+    fd_event_list = self._poll.poll(timeout)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/task/rpc/server.py", line 102, in _sighup_handler
+    self.task_manager.reload_config()
+  File "/usr/local/lib/python3.6/dist-packages/dbt/rpc/task_manager.py", line 128, in reload_config
+    config = self.config.from_args(self.args)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/config/runtime.py", line 210, in from_args
+    project, profile = cls.collect_parts(args)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/config/runtime.py", line 181, in collect_parts
+    partial = Project.partial_load(project_root)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/config/project.py", line 589, in partial_load
+    project_dict = _raw_project_from(project_root)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/config/project.py", line 168, in _raw_project_from
+    project_dict = _load_yaml(project_yaml_filepath)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/config/project.py", line 92, in _load_yaml
+    return load_yaml_text(contents)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/clients/yaml_helper.py", line 69, in load_yaml_text
+    raise dbt.exceptions.ValidationException(error)
+dbt.exceptions.ValidationException: Runtime Error
+  Syntax error near line 5
+  ------------------------------
+  2  |   target: dev <- environment to default to
+  3  |   outputs:
+  4  |     dev: <- configuring a specific environment
+  5  |       type: snowflake
+  6  |       account: MUZAFER
+  7  |       user: muzafer
+  8  |       password: Muzafer8008
+  
+  Raw Error:
+  ------------------------------
+  mapping values are not allowed here
+    in "<unicode string>", line 5, column 11:
+            type: snowflake
+                ^
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/dbt/clients/yaml_helper.py", line 62, in load_yaml_text
+    return safe_load(contents)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/clients/yaml_helper.py", line 57, in safe_load
+    return yaml.load(contents, Loader=YamlLoader)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/__init__.py", line 72, in load
+    return loader.get_single_data()
+  File "/usr/local/lib/python3.6/dist-packages/yaml/constructor.py", line 35, in get_single_data
+    node = self.get_single_node()
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+  File "/usr/local/lib/python3.6/dist-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/usr/local/lib/python3.6/dist-packages/yaml/parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+  File "/usr/local/lib/python3.6/dist-packages/yaml/scanner.py", line 116, in check_token
+    self.fetch_more_tokens()
+  File "/usr/local/lib/python3.6/dist-packages/yaml/scanner.py", line 220, in fetch_more_tokens
+    return self.fetch_value()
+  File "/usr/local/lib/python3.6/dist-packages/yaml/scanner.py", line 576, in fetch_value
+    self.get_mark())
+yaml.scanner.ScannerError: mapping values are not allowed here
+  in "<unicode string>", line 5, column 11:
+          type: snowflake
+              ^
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/app/sinter/clients/dbt.py", line 755, in call
+    command + extra_args
+  File "/usr/local/lib/python3.6/dist-packages/dbt/main.py", line 159, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/main.py", line 212, in run_from_args
+    results = task.run()
+  File "/usr/lib/python3.6/contextlib.py", line 99, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/main.py", line 185, in track_run
+    dbt.tracking.flush()
+  File "/usr/local/lib/python3.6/dist-packages/dbt/tracking.py", line 377, in flush
+    tracker.flush()
+  File "/usr/local/lib/python3.6/dist-packages/snowplow_tracker/tracker.py", line 218, in flush
+    emitter.sync_flush()
+  File "/usr/local/lib/python3.6/dist-packages/snowplow_tracker/emitters.py", line 182, in sync_flush
+    Emitter.flush(self)
+  File "/usr/local/lib/python3.6/dist-packages/snowplow_tracker/emitters.py", line 149, in flush
+    self.send_events(self.buffer)
+  File "/usr/local/lib/python3.6/dist-packages/snowplow_tracker/emitters.py", line 206, in send_events
+    status_code = self.http_post(data).status_code
+  File "/usr/local/lib/python3.6/dist-packages/dbt/tracking.py", line 68, in http_post
+    timeout=5.0
+  File "/usr/local/lib/python3.6/dist-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.6/dist-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/dist-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/dist-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/dist-packages/urllib3/connection.py", line 344, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/dist-packages/snowflake/connector/ssl_wrap_socket.py", line 401, in ssl_wrap_socket_with_ocsp
+    from .ocsp_asn1crypto import SnowflakeOCSPAsn1Crypto as SFOCSP
+  File "/usr/local/lib/python3.6/dist-packages/snowflake/connector/ocsp_asn1crypto.py", line 34, in <module>
+    from oscrypto import asymmetric
+  File "/usr/local/lib/python3.6/dist-packages/oscrypto/asymmetric.py", line 19, in <module>
+    from ._asymmetric import _unwrap_private_key_info
+  File "/usr/local/lib/python3.6/dist-packages/oscrypto/_asymmetric.py", line 27, in <module>
+    from .kdf import pbkdf1, pbkdf2, pkcs12_kdf
+  File "/usr/local/lib/python3.6/dist-packages/oscrypto/kdf.py", line 9, in <module>
+    from .util import rand_bytes
+  File "/usr/local/lib/python3.6/dist-packages/oscrypto/util.py", line 14, in <module>
+    from ._openssl.util import rand_bytes
+  File "/usr/local/lib/python3.6/dist-packages/oscrypto/_openssl/util.py", line 6, in <module>
+    from ._libcrypto import libcrypto, libcrypto_version_info, handle_openssl_error
+  File "/usr/local/lib/python3.6/dist-packages/oscrypto/_openssl/_libcrypto.py", line 9, in <module>
+    from ._libcrypto_cffi import (
+  File "/usr/local/lib/python3.6/dist-packages/oscrypto/_openssl/_libcrypto_cffi.py", line 29, in <module>
+    libcrypto_path = find_library('crypto')
+  File "/usr/lib/python3.6/ctypes/util.py", line 313, in find_library
+    return _findSoname_ldconfig(name) or \
+  File "/usr/lib/python3.6/ctypes/util.py", line 282, in _findSoname_ldconfig
+    env={'LC_ALL': 'C', 'LANG': 'C'}) as p:
+  File "/usr/lib/python3.6/subprocess.py", line 729, in __init__
+    restore_signals, start_new_session)
+  File "/usr/lib/python3.6/subprocess.py", line 1318, in _execute_child
+    part = os.read(errpipe_read, 50000)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/task/rpc/server.py", line 102, in _sighup_handler
+    self.task_manager.reload_config()
+  File "/usr/local/lib/python3.6/dist-packages/dbt/rpc/task_manager.py", line 128, in reload_config
+    config = self.config.from_args(self.args)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/config/runtime.py", line 210, in from_args
+    project, profile = cls.collect_parts(args)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/config/runtime.py", line 181, in collect_parts
+    partial = Project.partial_load(project_root)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/config/project.py", line 589, in partial_load
+    project_dict = _raw_project_from(project_root)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/config/project.py", line 168, in _raw_project_from
+    project_dict = _load_yaml(project_yaml_filepath)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/config/project.py", line 92, in _load_yaml
+    return load_yaml_text(contents)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/clients/yaml_helper.py", line 69, in load_yaml_text
+    raise dbt.exceptions.ValidationException(error)
+dbt.exceptions.ValidationException: Runtime Error
+  Syntax error near line 5
+  ------------------------------
+  2  |   target: dev <- environment to default to
+  3  |   outputs:
+  4  |     dev: <- configuring a specific environment
+  5  |       type: snowflake
+  6  |       account: MUZAFER
+  7  |       user: muzafer
+  8  |       password: Muzafer8008
+  
+  Raw Error:
+  ------------------------------
+  mapping values are not allowed here
+    in "<unicode string>", line 5, column 11:
+            type: snowflake
+                ^
+2020-07-29 07:54:59.991830 (MainThread): Runtime Error
+  Syntax error near line 5
+  ------------------------------
+  2  |   target: dev <- environment to default to
+  3  |   outputs:
+  4  |     dev: <- configuring a specific environment
+  5  |       type: snowflake
+  6  |       account: MUZAFER
+  7  |       user: muzafer
+  8  |       password: Muzafer8008
+  
+  Raw Error:
+  ------------------------------
+  mapping values are not allowed here
+    in "<unicode string>", line 5, column 11:
+            type: snowflake
+                ^
+2020-07-29 07:54:59.992637 (MainThread): subprocess 69 is still running
+2020-07-29 07:54:59.993625 (MainThread): unclosed <socket.socket fd=9, family=AddressFamily.AF_INET, type=2049, proto=6, laddr=('10.0.31.209', 49614), raddr=('52.0.42.206', 443)>
