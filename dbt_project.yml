@@ -10,4 +10,8 @@ sf:
       database: DEMO_DB
       warehouse: COMPUTE_WH
       schema: INFORMATION_SCHEMA
+<<<<<<< HEAD
       threads: 2
+=======
+      threads: 2
+>>>>>>> 3c11d54b450bd0af99629ecad3565419ba93e92e
