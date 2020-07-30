@@ -1,7 +1,7 @@
 my-snowflake-db:
   target: dev
   outputs:
-    dev:
+    dev: Development_env
       type: snowflake
       account: QI35268.ap-southeast-1
 
