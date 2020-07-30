@@ -1,18 +1,18 @@
 my-snowflake-db:
   target: dev
   outputs:
-    dev: Development_env
-      type: snowflake
-      account: QI35268.ap-southeast-1
+    dev: 'Development_env'
+      type: 'snowflake'
+      account: 'QI35268.ap-southeast-1'
 
       # User/password auth
-      user: MUZAFER
-      password: Muzafer8008
+      user: 'MUZAFER'
+      password: 'Muzafer8008'
 
-      role: SYSADMIN
-      database: DEMO_DB
-      warehouse: COMPUTE_WH
-      schema: INFORMATION_SCHEMA
+      role: 'SYSADMIN'
+      database: 'DEMO_DB'
+      warehouse: 'COMPUTE_WH'
+      schema: 'INFORMATION_SCHEMA'
       threads: 1
       client_session_keep_alive: False
 
