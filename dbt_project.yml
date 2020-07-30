@@ -1,17 +1,19 @@
-sf:
-  target: dev <- environment to default to
+my-snowflake-db:
+  target: dev
   outputs:
-    dev: <- configuring a specific environment
+    dev:
       type: snowflake
-      account: MUZAFER
-      user: muzafer
+      account: QI35268.ap-southeast-1
+
+      # User/password auth
+      user: MUZAFER
       password: Muzafer8008
+
       role: SYSADMIN
       database: DEMO_DB
       warehouse: COMPUTE_WH
       schema: INFORMATION_SCHEMA
-<<<<<<< HEAD
-      threads: 2
-=======
-      threads: 2
->>>>>>> 3c11d54b450bd0af99629ecad3565419ba93e92e
+      threads: 1
+      client_session_keep_alive: False
+
+
